@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { PartnerlistComponent } from './partnerlist/partnerlist.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { AddStudentComponent } from './add-student/add-student.component';
+import { PaymentListComponent } from './payment-list/payment-list.component';
+import { AddPaymentComponent } from './add-payment/add-payment.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'view-payment', pathMatch: 'full' },
-  { path: 'view-payment', component: StudentListComponent },
-  { path: 'add-payment', component: AddStudentComponent },
+  { path: 'view-payment', component: PaymentListComponent },
+  { path: 'add-payment', component: AddPaymentComponent }
 ];
 
 @NgModule({

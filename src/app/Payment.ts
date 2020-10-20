@@ -1,4 +1,4 @@
-export class Student {
+export class Payment {
   payerId: number;
   email:  String ;
   payername: String ;

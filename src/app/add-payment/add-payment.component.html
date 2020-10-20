@@ -3,11 +3,11 @@
   <div class="col-sm-4"></div>
   <div class="col-sm-4" >
     <div [hidden]="submitted" style="width: 400px;">
-      <form [formGroup]="studentsaveform" #savestudent (ngSubmit)="saveStudent(saveStudent)">
+      <form [formGroup]="paymentsaveform" #savepayment (ngSubmit)="savePayment(savePayment)">
           <div class="form-group">
               <label for="name">Payer Name</label>
-              <input type="text" class="form-control"  formControlName="payer_name" data-toggle="tooltip"
-                 data-placement="right" title="Enter Student Name" >
+              <input type="text" class="form-control"  formControlName="payername" data-toggle="tooltip"
+                 data-placement="right" title="Enter Payer Name" >
               <div class="alert alert-danger" *ngIf = "(PayerName.touched) && (PayerName.invalid)"
                 style="margin-top: 5px;">
                   <span *ngIf="PayerName.errors.required">Payer Name is Required</span>
@@ -19,8 +19,8 @@
 
           <div class="form-group">
               <label for="name">Payer Email</label>
-              <input type="text" class="form-control" formControlName="payer_email"
-                data-toggle="tooltip" data-placement="right" title="Enter Student Email">
+              <input type="text" class="form-control" formControlName="payeremail"
+                data-toggle="tooltip" data-placement="right" title="Enter PayerEmail">
                 <div class="alert alert-danger" *ngIf = "(PayerEmail.touched) && (PayerEmail.invalid)"
                 style="margin-top: 5px;">
                   <span *ngIf="PayerEmail.errors.required">Student Email is Required</span>
@@ -110,13 +110,13 @@
               </div>
 
               <div class="form-group">
-                <label for="name">Payable Amount</label>
-                <input type="text" class="form-control"  formControlName="amount" data-toggle="tooltip"
-                  data-placement="right" title="Enter Amount" >
-                  <div class="alert alert-danger" *ngIf = "(Amount.touched) && (Amount.invalid)"
+                <label for="name">Payable Account Number</label>
+                <input type="text" class="form-control"  formControlName="accountnumber" data-toggle="tooltip"
+                  data-placement="right" title="Enter Accountnumber" >
+                  <div class="alert alert-danger" *ngIf = "(Accountnumber.touched) && (Accountnumber.invalid)"
                     style="margin-top: 5px;">
-                      <span *ngIf="Amount.errors.required">Amount is Required</span>
-                        <span *ngIf = "Amount.errors.minlength">
+                      <span *ngIf="Accountnumber.errors.required">Accountnumber is Required</span>
+                        <span *ngIf = "Accountnumber.errors.minlength">
                             MinLength Error
                         </span>
                   </div>
@@ -141,12 +141,14 @@
   </div>
   <div class="col-sm-4"></div>
 </div>
+
+
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
       <div [hidden]="!submitted">
          <h4>Bill Added SuccessFully!</h4>
-         <button (click)="addStudentForm()" class='btn btn-primary'>Add More Bills</button>
+         <button (click)="addPaymentForm()" class='btn btn-primary'>Add More Bills</button>
       </div>
   </div>
   <div class="col-sm-4"></div>

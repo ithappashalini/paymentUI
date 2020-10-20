@@ -7,16 +7,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PartnerlistComponent } from './partnerlist/partnerlist.component';
 import {DataTablesModule} from 'angular-datatables';
-import { StudentListComponent } from './student-list/student-list.component';
-import { AddStudentComponent } from './add-student/add-student.component';
+import { PaymentListComponent } from './payment-list/payment-list.component';
+import { AddPaymentComponent } from './add-payment/add-payment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     PartnerlistComponent,
-    StudentListComponent,
-    AddStudentComponent,
+    PaymentListComponent,
+    AddPaymentComponent,
   ],
   imports: [
     BrowserModule,
